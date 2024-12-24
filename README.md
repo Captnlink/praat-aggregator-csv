@@ -2,18 +2,20 @@
 
 Description here
 
-## Install dependencies
+## Installation
+
+### Install dependencies
 
 Macos systems
 
 ``` shell
-brew install python python-pip python-venv
+brew install python
 ```
 
 Linux Systems (Debian)
 
 ``` shell
-sudo apt get install python python-pip python-venv
+sudo apt get install python
 ```
 
 Windows system
@@ -22,10 +24,12 @@ Download and install [Python](https://www.python.org/downloads/)
 
 Install [Pip](https://www.geeksforgeeks.org/how-to-install-pip-on-windows/)
 
-Install python virtual environment
+### Install the script
+
+Clone this repository
 
 ``` shell
-pip install virtualenv
+git clone git.insert.url.here
 ```
 
 ## How to use
