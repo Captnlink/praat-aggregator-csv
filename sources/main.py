@@ -24,7 +24,6 @@ if __name__ == "__main__":
     parser.add_argument("-d", "--directory", type=str, help="path to PRAAT files")
     parser.add_argument("-a", "--algorithm", type=str, help="PRAAT algorithm")
     parser.add_argument("-o", "--output", type=str, help="name of outputted files", default="output")
-    parser.add_argument("action", type=str, help="action to perform")
 
     args = parser.parse_args()
 
@@ -41,14 +40,12 @@ if __name__ == "__main__":
 
     a = Analysis(praat_directory, output_directory, praat_algorithm)
 
-    if args.action == "count":
-        participant_metadata = a.extract_metadata_as_json()
-        a.save_metadata(participant_metadata)
-
-    elif args.action == "aggregate":
+    if praat_algorithm is not "wav":
         a.aggregate_and_save_data_to_csv()
-    else:
-        print(f"action '{args.action}' is not known, please choose count or aggregate")
+
+    participant_metadata = a.extract_metadata_as_json()
+    a.save_metadata(participant_metadata)
+
   
 
 
