@@ -38,6 +38,22 @@ Clone this repository using this line:
 git clone https://github.com/Captnlink/praat-aggregator-csv.git
 ```
 
+## How to update
+
+``` shell
+git fetch && git pull
+```
+
+If we have modified the script in some ways, this might not work.
+If you don't mind losing the changes you've made, you can do the following
+
+``` shell
+git fetch && git reset --hard origin/main
+```
+
+If you do mind, please learn how to perform git operations.
+You can navigate to [Learn Git online](https://learngitbranching.js.org/)
+
 ## How to use
 
 ### Data files structure
