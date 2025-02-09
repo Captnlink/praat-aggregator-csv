@@ -40,15 +40,19 @@ git clone https://github.com/Captnlink/praat-aggregator-csv.git
 
 ## How to update
 
+Ouvrir un nouveau terminal avec VSCode
+
 ``` shell
-git fetch && git pull
+git fetch
+git pull
 ```
 
 If we have modified the script in some ways, this might not work.
 If you don't mind losing the changes you've made, you can do the following
 
 ``` shell
-git fetch && git reset --hard origin/main
+git fetch
+git reset --hard origin/main
 ```
 
 If you do mind, please learn how to perform git operations.
@@ -56,7 +60,9 @@ You can navigate to [Learn Git online](https://learngitbranching.js.org/)
 
 ## How to use
 
-### Data files structure
+### How to open the script
+
+### Prepare the Data files structure
 
 Each file should be named `participantID_sessionName_projectName_SentenceName.algorithm`.
 Each file should be in a subfolder named after the frequency range of the PRAAT analysis

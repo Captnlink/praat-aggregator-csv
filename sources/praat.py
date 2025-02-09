@@ -28,6 +28,7 @@ class Analysis():
         files_to_extract = []
         for path in self.input_location.rglob(f'*.{self.algorithm}'):
             files_to_extract.append(path)
+            print(path)
         return files_to_extract
     
 

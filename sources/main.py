@@ -30,7 +30,9 @@ if __name__ == "__main__":
     praat_algorithm:str = args.algorithm
     output_directory:Path =  Path(args.output)
     extracted_data_file:Path = output_directory / Path(f"{praat_algorithm}_aggregation.csv")
-    praat_directory:Path = Path(args.directory) 
+    praat_directory:Path = Path(args.directory)
+
+    print(output_directory)
 
     if not praat_directory.resolve().exists():
         print(f"Directory '{praat_directory}' does not exist")
@@ -40,7 +42,7 @@ if __name__ == "__main__":
 
     a = Analysis(praat_directory, output_directory, praat_algorithm)
 
-    if praat_algorithm is not "wav":
+    if praat_algorithm != "wav":
         a.aggregate_and_save_data_to_csv()
 
     participant_metadata = a.extract_metadata_as_json()
