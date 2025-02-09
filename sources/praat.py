@@ -37,6 +37,7 @@ class Analysis():
         participants_metadata:dict = {}
 
         for file in files_to_extract:
+            print(file)
             serializer = get_serializer('metadata')
             file_metadata = serializer(file)
 

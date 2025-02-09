@@ -32,7 +32,7 @@ if __name__ == "__main__":
     extracted_data_file:Path = output_directory / Path(f"{praat_algorithm}_aggregation.csv")
     praat_directory:Path = Path(args.directory)
 
-    print(output_directory)
+    print(praat_directory)
 
     if not praat_directory.resolve().exists():
         print(f"Directory '{praat_directory}' does not exist")
